@@ -1,0 +1,55 @@
+server:
+  port: 50077
+  
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    statusPageUrlPath: /actuator/info
+    healthCheckUrlPath: /actuator/health      
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"    
+    
+authorizations:
+  service: MP-AUTHORIZATIONS
+  
+captures:
+  service: MP-CAPTURES
+  
+amqp:
+  payments:
+    exchange:
+      completed:
+        payment: completed_payment
+        
+    queue:
+      payment:
+        created:
+          request: payment_created_request_queue
+  events:
+    queue:
+      created:
+        request: createad_event_queue
+    exchange:
+      created: created_events
+    key:
+      created:
+        request: events          
+          
+          
+environment:
+  nifi-url: http://localhost:60056
+  callback-url: ${environment.nifi-url}/completePaymentCallback
