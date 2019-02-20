@@ -1,0 +1,50 @@
+server:
+  port: 50060
+  
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    
+  data:
+    mongodb:
+      database: mp_init_transactions
+      host: localhost
+      
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"    
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    statusPageUrlPath: /actuator/info
+    healthCheckUrlPath: /actuator/health      
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:50068/validateClient  
+      
+amqp:
+  init-transactions:
+    exchange:
+      created:
+        init-transaction: created_init_transaction
+
+  events:
+    queue:
+      created:
+        request: createad_event_queue
+    exchange:
+      created: created_events
+    key:
+      created:
+        request: events        
