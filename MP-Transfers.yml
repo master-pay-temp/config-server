@@ -59,6 +59,6 @@ beneficiary:
   service: MP-BENEFICIARY
   
 auth:
-  service: AUTH
+  service: MP-AUTHSERVER
   path: /oauth/token
        
