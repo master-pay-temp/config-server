@@ -67,6 +67,15 @@ amqp:
         completed:
           response: authorization_completed_response_queue
 
+  captures:
+    exchange:
+      completed:
+        capture: completed_capture
+    queue:
+      capture:
+        completed:
+          response: capture_completed_response_queue          
+
 environment:
   nifi-url: http://localhost:60056
   callback-url: ${environment.nifi-url}/completeTransactionCallback
