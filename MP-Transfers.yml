@@ -46,7 +46,11 @@ amqp:
 security:
   oauth2:
     resource:
-      userInfoUri: http://localhost:50068/validateClient  
+      userInfoUri: http://localhost:50068/validateClient
+      
+oauth:
+  client_id: transfer_client
+  client_secret: MDggMTAgMDMgOWUgM2UgZDkgN2IgMmYgZjIgZDkgZjIgZGQgMGUgNzMgOTk=
 
 transaction:
   service: MP-TRANSACTIONS
