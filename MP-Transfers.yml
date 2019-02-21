@@ -49,7 +49,7 @@ security:
       userInfoUri: http://localhost:50068/validateClient
       
 oauth:
-  client_id: transfer_client
+  client_id: mp_transfer_client
   client_secret: MDggMTAgMDMgOWUgM2UgZDkgN2IgMmYgZjIgZDkgZjIgZGQgMGUgNzMgOTk=
 
 transaction:
