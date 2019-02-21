@@ -57,7 +57,16 @@ amqp:
     key:
       created:
         request: events          
-          
+
+  authorizations:
+    exchange:
+      completed:
+        authorization: completed_authorization
+    queue:
+      authorization:
+        completed:
+          response: authorization_completed_response_queue
+
 environment:
   nifi-url: http://localhost:60056
   callback-url: ${environment.nifi-url}/completeTransactionCallback
