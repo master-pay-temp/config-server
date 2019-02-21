@@ -1,0 +1,51 @@
+server:
+  port: 50030
+  
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  data:
+    mongodb:
+      database: mp_transfers
+      host: localhost
+      
+#logging:
+#  level:
+#    org.springframework.data.mongodb.core.ReactiveMongoTemplate: DEBUG
+   
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"    
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    statusPageUrlPath: /actuator/info
+    healthCheckUrlPath: /actuator/health      
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+   
+
+amqp:
+  events:
+    queue:
+      created:
+        request: createad_event_queue
+    exchange:
+      created: created_events
+    key:
+      created:
+        request: events          
+  
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:50068/validateClient  
+      
+       
