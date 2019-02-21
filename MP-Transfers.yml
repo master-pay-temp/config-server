@@ -47,5 +47,10 @@ security:
   oauth2:
     resource:
       userInfoUri: http://localhost:50068/validateClient  
-      
+
+transaction:
+  service: MP-TRANSACTIONS
+  
+beneficiary:
+  service: MP-BENEFICIARY
        
