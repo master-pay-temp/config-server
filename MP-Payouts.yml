@@ -9,7 +9,7 @@ spring:
     password: guest
   data:
     mongodb:
-      database: mp_transfers
+      database: mp_payouts
       host: localhost
       
 #logging:
@@ -32,10 +32,10 @@ eureka:
     instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
    
 amqp:
-  transfers:
+  payouts:
     exchange:
       created:
-        transfer: created_transfer
+        payout: created_payout
 
   events:
     queue:
@@ -70,6 +70,6 @@ spring:
   
   data:
     mongodb:
-      database: mp_init_transactions
+      database: mp_payouts
       host: localhost
       port: 27018
