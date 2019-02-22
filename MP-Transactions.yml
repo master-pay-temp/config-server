@@ -57,7 +57,25 @@ amqp:
     key:
       created:
         request: events          
-          
+
+  authorizations:
+    exchange:
+      completed:
+        authorization: completed_authorization
+    queue:
+      authorization:
+        completed:
+          response: authorization_completed_response_queue
+
+  captures:
+    exchange:
+      completed:
+        capture: completed_capture
+    queue:
+      capture:
+        completed:
+          response: capture_completed_response_queue          
+
 environment:
   nifi-url: http://localhost:60056
   callback-url: ${environment.nifi-url}/completeTransactionCallback
@@ -65,6 +83,18 @@ environment:
 security:
   oauth2:
     resource:
-      userInfoUri: http://localhost:50068/validateClient  
+      userInfoUri: http://localhost:50068/validateClient
+      
+---
+
+spring:
+	profiles: integration
+  
+  data:
+    mongodb:
+      database: mp_init_transactions
+      host: localhost
+      port: 27018
+  
       
        
