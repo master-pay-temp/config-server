@@ -34,5 +34,18 @@ amqp:
         created:
           request: payment_param_page_response_queue
         updated:
-          request: update_payment_param_page_response_queue          
+          request: update_payment_param_page_response_queue    
+          
+          
+---
+
+spring:
+	profiles: integration
+  
+  data:
+    mongodb:
+      database: mp_init_transactions
+      host: localhost
+      port: 27018
+  
     

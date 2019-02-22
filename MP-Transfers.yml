@@ -31,8 +31,12 @@ eureka:
     healthCheckUrlPath: /actuator/health      
     instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
    
-
 amqp:
+  transfers:
+    exchange:
+      created:
+        transfer: created_transfer
+
   events:
     queue:
       created:
@@ -46,7 +50,11 @@ amqp:
 security:
   oauth2:
     resource:
-      userInfoUri: http://localhost:50068/validateClient  
+      userInfoUri: http://localhost:50068/validateClient
+      
+oauth:
+  client_id: mp_transfer_client
+  client_secret: MDggMTAgMDMgOWUgM2UgZDkgN2IgMmYgZjIgZDkgZjIgZGQgMGUgNzMgOTk=
 
 transaction:
   service: MP-TRANSACTIONS
@@ -54,7 +62,11 @@ transaction:
 beneficiary:
   service: MP-BENEFICIARY
   
-  ---
+auth:
+  service: MP-AUTHSERVER
+  path: /oauth/token  
+
+---
 
 spring:
 	profiles: integration
@@ -64,6 +76,4 @@ spring:
       database: mp_init_transactions
       host: localhost
       port: 27018
-  
-
-       
+      
