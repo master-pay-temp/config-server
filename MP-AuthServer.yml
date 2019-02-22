@@ -50,3 +50,16 @@ config:
 #security:
 #  basic:
 #    enabled: false
+
+---
+
+spring:
+	profiles: integration
+  
+  data:
+    mongodb:
+      database: mp_init_transactions
+      host: localhost
+      port: 27018
+  
+
