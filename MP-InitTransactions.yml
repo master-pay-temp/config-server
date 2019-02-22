@@ -47,7 +47,7 @@ amqp:
       created: created_events
     key:
       created:
-        request: events        
+        request: events
         
 ---
 
