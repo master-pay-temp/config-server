@@ -54,7 +54,7 @@ config:
 ---
 
 spring:
-	profiles: integration
+  profiles: integration
   
   data:
     mongodb:
