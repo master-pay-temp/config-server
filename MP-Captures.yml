@@ -38,11 +38,11 @@ amqp:
 ---
 
 spring:
-	profiles: integration
+  profiles: integration
   
   data:
     mongodb:
-      database: mp_init_transactions
+      database: mp_captures
       host: localhost
       port: 27018
   
