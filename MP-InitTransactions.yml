@@ -52,7 +52,7 @@ amqp:
 ---
 
 spring:
-	profiles: integration
+  profiles: integration
   
   data:
     mongodb:
