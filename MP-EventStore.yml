@@ -35,13 +35,10 @@ amqp:
           request: createad_event_queue
           
 ---
-
 spring:
   profiles: integration
-  
   data:
     mongodb:
       database: mp_events
       host: localhost
       port: 27018
-  
