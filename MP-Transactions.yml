@@ -3,7 +3,7 @@ server:
   
 spring:
   rabbitmq:
-    host: localhost
+    host: o2c.ovh
     port: 5672
     username: guest
     password: guest
