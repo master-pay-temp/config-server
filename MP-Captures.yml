@@ -36,13 +36,10 @@ amqp:
             request: create_capture_response_queue
             
 ---
-
 spring:
   profiles: integration
-  
   data:
     mongodb:
       database: mp_captures
       host: localhost
       port: 27018
-  
