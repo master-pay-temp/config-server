@@ -86,15 +86,10 @@ security:
       userInfoUri: http://localhost:50068/validateClient
       
 ---
-
 spring:
   profiles: integration
-  
   data:
     mongodb:
       database: mp_transactions
       host: localhost
       port: 27018
-  
-      
-       
