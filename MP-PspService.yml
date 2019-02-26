@@ -3,10 +3,10 @@ server:
   
 spring:
   rabbitmq:
-    host: localhost
+    host: o2c.ovh
     port: 5672
-    username: guest
-    password: guest
+    username: master-pay
+    password: master123
       
 management:
   endpoints:
