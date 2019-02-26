@@ -27,6 +27,19 @@ authorization:
 psp:
   service: MP-PSPSERVICE
 
+oauth:
+  client_id: mp_captures_client
+  client_secret: NmQgNjAgNTMgNjMgZDIgMDkgMTcgMzUgOWYgZmQgYTMgM2IgYTkgNzYgYzYg
+
+auth:
+  service: MP-AUTHSERVER
+  path: /oauth/token  
+  
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:50068/validateClient  
+
 management:
   endpoints:
     web:
