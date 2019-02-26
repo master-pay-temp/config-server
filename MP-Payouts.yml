@@ -64,10 +64,8 @@ auth:
   path: /oauth/token  
 
 ---
-
 spring:
   profiles: integration
-  
   data:
     mongodb:
       database: mp_payouts
