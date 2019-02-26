@@ -28,14 +28,10 @@ management:
         include: "*"
         
 ---
-
 spring:
   profiles: integration
-  
   data:
     mongodb:
       database: mp_authorizations
       host: localhost
       port: 27018
-  
-
