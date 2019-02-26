@@ -67,13 +67,10 @@ auth:
   path: /oauth/token  
 
 ---
-
 spring:
   profiles: integration
-  
   data:
     mongodb:
       database: mp_transfers
       host: localhost
       port: 27018
-      
