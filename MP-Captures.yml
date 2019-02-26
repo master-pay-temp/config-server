@@ -20,7 +20,13 @@ eureka:
     statusPageUrlPath: /actuator/info
     healthCheckUrlPath: /actuator/health      
     instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-    
+
+authorization:
+  service: MP-AUTHORIZATIONS
+  
+psp:
+  service: MP-PSPSERVICE
+
 management:
   endpoints:
     web:
