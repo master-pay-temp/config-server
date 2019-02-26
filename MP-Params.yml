@@ -38,11 +38,8 @@ amqp:
           
           
 ---
-
 spring:
   profiles: integration
- 
-spring:
   data:
     mongodb:
       database: mp_params
