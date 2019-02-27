@@ -29,6 +29,14 @@ authorizations:
 captures:
   service: MP-CAPTURES
   
+auth:
+  service: MP-AUTHSERVER
+  path: /oauth/token   
+  
+oauth:
+  client_id: mp_payments_client
+  client_secret: MGQgZTMgMmYgODcgZmUgZmUgYWMgOGEgNDMgNzcgMTQgZTYgODYgYzggOGIg  
+  
 amqp:
   payments:
     exchange:
