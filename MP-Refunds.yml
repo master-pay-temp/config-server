@@ -1,0 +1,64 @@
+server:
+  port: 50036
+  
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  data:
+    mongodb:
+      database: mp_refunds
+      host: localhost    
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    statusPageUrlPath: /actuator/info
+    healthCheckUrlPath: /actuator/health      
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"    
+
+transaction:
+  service: MP-TRANSACTIONS
+
+psp:
+  service: MP-PSPSERVICE
+      
+oauth:
+  client_id: mp_refunds_client
+  client_secret: MTIgMWEgNGMgMWYgZDEgYzggYWUgMmUgNDkgMzAgOTYgOTMgYjAgNDEgY2Yg
+
+auth:
+  service: MP-AUTHSERVER
+  path: /oauth/token  
+  
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:50068/validateClient  
+
+
+amqp:
+  refunds:
+    exchange:
+      completed:
+        refund: completed_refund            
+            
+  events:
+    queue:
+      created:
+        request: createad_event_queue
+    exchange:
+      created: created_events
+    key:
+      created:
+        request: events   
