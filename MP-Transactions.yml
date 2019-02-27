@@ -76,6 +76,15 @@ amqp:
         completed:
           response: capture_completed_response_queue          
 
+  refunds:
+    exchange:
+      completed:
+        refund: completed_refund
+    queue:
+      refunde:
+        completed:
+          response: refund_completed_response_queue              
+
 environment:
   nifi-url: http://localhost:60056
   callback-url: ${environment.nifi-url}/completeTransactionCallback
