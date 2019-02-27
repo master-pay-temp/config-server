@@ -28,3 +28,11 @@ param:
   
 init-transaction:
   service: MP-INITTRANSACTIONS
+
+auth:
+  service: MP-AUTHSERVER
+  path: /oauth/token   
+  
+oauth:
+  client_id: mp_request_params_client
+  client_secret: MTIgYjQgOGMgYzEgMDcgOWUgOGIgMmQgNWMgMWYgODIgOTQgZDQgYmUgYWQg
