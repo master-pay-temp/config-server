@@ -35,7 +35,7 @@ auth:
   
 oauth:
   client_id: mp_payments_client
-  client_secret: MGQgZTMgMmYgODcgZmUgZmUgYWMgOGEgNDMgNzcgMTQgZTYgODYgYzggOGIg  
+  client_secret: MGQgZTMgMmYgODcgZmUgZmUgYWMgOGEgNDMgNzcgMTQgZTYgODYgYzggOGIg
   
 amqp:
   payments:
