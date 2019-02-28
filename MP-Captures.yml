@@ -65,3 +65,12 @@ amqp:
     key:
       created:
         request: events   
+        
+---
+spring:
+  profiles: integration
+  data:
+    mongodb:
+      database: mp_captures
+      host: localhost
+      port: 27018        
