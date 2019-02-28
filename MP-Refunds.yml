@@ -5,8 +5,8 @@ spring:
   rabbitmq:
     host: localhost
     port: 5672
-    username: guest
-    password: guest
+    username: master-pay
+    password: master123
   data:
     mongodb:
       database: mp_refunds
