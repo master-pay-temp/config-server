@@ -22,6 +22,18 @@ eureka:
     statusPageUrlPath: /actuator/info
     healthCheckUrlPath: /actuator/health      
     instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-    
+
+
+amqp:
+  events:
+    queue:
+      created:
+        request: createad_event_queue
+    exchange:
+      created: created_events
+    key:
+      created:
+        request: events
+
 dalenys:
   url: https://secure-test.be2bill.com/front/service/rest/process    
