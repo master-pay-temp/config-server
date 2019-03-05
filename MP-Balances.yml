@@ -54,7 +54,7 @@ security:
       
 oauth:
   client_id: mp_balance_client
-  client_secret: MDggMTAgMDMgOWUgM2UgZDkgN2IgMmYgZjIgZDkgZjIgZGQgMGUgNzMgOTk=
+  client_secret: NDUgOGIgMDAgZTAgOWIgMDYgY2UgZTMgODQgNmMgM2YgN2YgZjUgNzEgYjkg
 
 transaction:
   service: MP-TRANSACTIONS
