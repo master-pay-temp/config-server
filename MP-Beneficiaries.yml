@@ -1,1 +1,66 @@
+server:
+  port: 50073
+  
+spring:
+  rabbitmq:
+    host: o2c.ovh
+    port: 5672
+    username: master-pay
+    password: master123
+  data:
+    mongodb:
+      database: mp_beneficiaries
+      host: localhost
+      
+#logging:
+#  level:
+#    org.springframework.data.mongodb.core.ReactiveMongoTemplate: DEBUG
+   
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"    
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    statusPageUrlPath: /actuator/info
+    healthCheckUrlPath: /actuator/health      
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+   
+amqp:
+  beneficiaries:
+    queue:
+      beneficiary:
+        created:
+          request: beneficiary_created_response_queue
+        updated:
+          request: beneficiary_updated_response_queue
 
+  events:
+    queue:
+      created:
+        request: createad_event_queue
+    exchange:
+      created: created_events
+    key:
+      created:
+        request: events          
+  
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:50068/validateClient
+
+
+---
+spring:
+  profiles: integration
+  data:
+    mongodb:
+      database: mp_beneficiaries
+      host: localhost
+      port: 27018
