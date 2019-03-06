@@ -74,3 +74,7 @@ spring:
       database: mp_balances
       host: localhost
       port: 27018
+      
+server:
+  host: http://o2c.ovh
+  port: 50024      
