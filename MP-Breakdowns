@@ -1,0 +1,76 @@
+server:
+  port: 50030
+  
+spring:
+  rabbitmq:
+    host: o2c.ovh
+    port: 5672
+    username: master-pay
+    password: master123
+  data:
+    mongodb:
+      database: mp_transfers
+      host: localhost
+      
+#logging:
+#  level:
+#    org.springframework.data.mongodb.core.ReactiveMongoTemplate: DEBUG
+   
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"    
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    statusPageUrlPath: /actuator/info
+    healthCheckUrlPath: /actuator/health      
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+   
+amqp:
+  transfers:
+    exchange:
+      created:
+        transfer: created_transfer
+
+  events:
+    queue:
+      created:
+        request: createad_event_queue
+    exchange:
+      created: created_events
+    key:
+      created:
+        request: events          
+  
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:50068/validateClient
+      
+oauth:
+  client_id: mp_transfer_client
+  client_secret: MDggMTAgMDMgOWUgM2UgZDkgN2IgMmYgZjIgZDkgZjIgZGQgMGUgNzMgOTk=
+
+transaction:
+  service: MP-TRANSACTIONS
+  
+beneficiary:
+  service: MP-BENEFICIARY
+  
+auth:
+  service: MP-AUTHSERVER
+  path: /oauth/token  
+
+---
+spring:
+  profiles: integration
+  data:
+    mongodb:
+      database: mp_transfers
+      host: localhost
+port: 27018
