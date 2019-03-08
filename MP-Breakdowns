@@ -73,4 +73,4 @@ spring:
     mongodb:
       database: mp_breakdowns
       host: localhost
-port: 27018
+      port: 27018
