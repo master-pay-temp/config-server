@@ -1,4 +1,5 @@
 server:
+  url: http://localhost:${server.port}
   port: 50036
   
 spring:
@@ -70,4 +71,8 @@ spring:
     mongodb:
       database: mp_refunds
       host: localhost
-      port: 27018        
+      port: 27018
+      
+      
+  server:
+    url: http://o2c.ovh:${server.port}
