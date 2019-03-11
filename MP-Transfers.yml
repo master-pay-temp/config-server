@@ -1,4 +1,5 @@
 server:
+  url: http://localhost:${server.port}
   port: 50030
   
 spring:
@@ -74,3 +75,6 @@ spring:
       database: mp_transfers
       host: localhost
       port: 27018
+
+server:
+  url: http://o2c.ovh:${server.port}
