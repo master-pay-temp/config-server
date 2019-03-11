@@ -49,6 +49,10 @@ amqp:
       created:
         request: events
         
+auth:
+  service: MP-AUTHSERVER
+  path: /oauth/token          
+        
 ---
 spring:
   profiles: integration
