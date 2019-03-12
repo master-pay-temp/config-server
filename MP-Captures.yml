@@ -26,7 +26,7 @@ authorization:
   service: MP-AUTHORIZATIONS
   
 breakdowns:
-  servive: MP-BREAKDOWNS
+  service: MP-BREAKDOWNS
   
 psp:
   service: MP-PSPSERVICE
