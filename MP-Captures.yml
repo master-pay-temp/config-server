@@ -25,15 +25,15 @@ eureka:
 authorization:
   service: MP-AUTHORIZATIONS
   
+breakdowns:
+  servive: MP-BREAKDOWNS
+  
 psp:
   service: MP-PSPSERVICE
 
 oauth:
   client_id: mp_captures_client
   client_secret: NmQgNjAgNTMgNjMgZDIgMDkgMTcgMzUgOWYgZmQgYTMgM2IgYTkgNzYgYzYg
-
-breakdowns:
-  servive: MP-BREAKDOWNS
 
 auth:
   service: MP-AUTHSERVER
