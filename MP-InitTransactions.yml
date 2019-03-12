@@ -53,6 +53,9 @@ oauth:
   client_id: mp_init_transaction_client
   client_secret: NzQgYTkgMjkgNTEgZTQgNmYgN2QgZDAgZDUgMTEgZjggOWYgZDggNWMgZGIg
 
+captures:
+  service: MP-CAPTURES
+
 auth:
   service: MP-AUTHSERVER
   path: /oauth/token          
