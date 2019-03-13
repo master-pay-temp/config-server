@@ -4,10 +4,10 @@ server:
   
 spring:
   rabbitmq:
-    host: o2c.ovh
+    host: localhost
     port: 5672
-    username: master-pay
-    password: master123
+    username: guest
+    password: guest
   data:
     mongodb:
       database: mp_transactions
@@ -103,6 +103,11 @@ spring:
       database: mp_transactions
       host: localhost
       port: 27018
+  rabbitmq:
+    host: o2c.ovh
+    port: 5672
+    username: master-pay
+    password: master123
 
 server:
   url: http://o2c.ovh:${server.port}
