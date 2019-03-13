@@ -78,4 +78,4 @@ spring:
     password: master123      
       
 webapp:
-  url: http://localhost:4200      
+  url: http://webapp-integration.o2c.ovh
