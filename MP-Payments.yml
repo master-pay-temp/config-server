@@ -3,10 +3,10 @@ server:
   
 spring:
   rabbitmq:
-    host: o2c.ovh
+    host: localhost
     port: 5672
-    username: master-pay
-    password: master123
+    username: guest
+    password: guest
     
 eureka:
   client:
@@ -61,3 +61,12 @@ amqp:
 environment:
   nifi-url: http://localhost:60056
   callback-url: ${environment.nifi-url}/completePaymentCallback
+  
+---
+spring:
+  profile: integrations
+  rabbitmq:
+    host: o2c.ovh
+    port: 5672
+    username: master-pay
+    password: master123
