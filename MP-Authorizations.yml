@@ -29,7 +29,11 @@ management:
         include: "*"
         
 psp:
-  service: MP-PSPSERVICE        
+  service: MP-PSPSERVICE
+  
+auth:
+  service: MP-AUTHSERVER
+  path: /oauth/token
    
 amqp:
   transactions:
