@@ -34,6 +34,10 @@ psp:
 auth:
   service: MP-AUTHSERVER
   path: /oauth/token
+  
+oauth:
+  client_id: mp_authorizations_client
+  client_secret: Y2QgZWEgOWMgYzAgNzkgNDQgZGMgYjEgMDUgMTcgNjYgNWEgZDQgOGEgOTEg  
    
 amqp:
   transactions:
