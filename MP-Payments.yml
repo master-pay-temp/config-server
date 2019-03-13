@@ -64,7 +64,7 @@ environment:
   
 ---
 spring:
-  profiles: integrations
+  profiles: integration
   rabbitmq:
     host: o2c.ovh
     port: 5672
