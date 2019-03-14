@@ -36,6 +36,10 @@ amqp:
     exchange:
       created:
         breakdown: created_breakdown
+    queue:
+      payment:
+        completed:
+          response: breakdown_payment_created_response_queue        
 
   events:
     queue:
