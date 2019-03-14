@@ -58,7 +58,13 @@ captures:
 
 auth:
   service: MP-AUTHSERVER
-  path: /oauth/token          
+  path: /oauth/token        
+  
+beneficiary:
+  service: MP-BENEFICIARIES
+  
+breakdowns:
+  service: MP-BREAKDOWNS
 
 webapp:
   url: http://localhost:4200
