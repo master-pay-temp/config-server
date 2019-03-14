@@ -39,7 +39,7 @@ amqp:
     queue:
       payment:
         completed:
-          response: breakdown_payment_created_response_queue        
+          response: payment_completed_breakdown_response_queue        
 
   events:
     queue:
