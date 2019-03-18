@@ -17,10 +17,16 @@ spring:
       - id: MP-Transactions
         uri: lb://MP-Transactions
         predicates:
-        - Path=/transactions/*
+        - Path=/transactions
         - Method=GET
         filters:
-        - RewritePath=/transactions/, /
+        - RewritePath=/transactions, /
+      - id: MP-Transactions-withId
+        uri: lb://MP-Transactions
+        predicates:
+        - Path=/transactions/{id}
+        - Method=GET
+        filters:
         - RewritePath=/transactions/(?<id>.*), /$\{id}
       - id: MP-AuthServer
         uri: lb://MP-AuthServer        
