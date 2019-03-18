@@ -1,0 +1,100 @@
+server:
+  port: 8880
+  
+spring:
+  cloud:
+    gateway:
+      discovery: 
+        locator: 
+          enabled: true
+      routes:
+      - id: MP-InitTransactions
+        uri: lb://MP-InitTransactions
+        predicates:
+        - Path=/postPaymentPage/**
+        - Method=POST
+        filters:
+        - RewritePath=/postPaymentPage/, /
+      - id: MP-Transactions
+        uri: lb://MP-Transactions
+        predicates:
+        - Path=/transactions/*
+        - Method=GET
+        filters:
+        - RewritePath=/transactions/, /
+        - RewritePath=/transactions/(?<id>.*), /$\{id}
+      - id: MP-AuthServer
+        uri: lb://MP-AuthServer        
+        predicates:
+        - Path=/oauth/token**
+        filters:
+        - RewritePath=/oauth/token, /oauth/token
+      - id: MP-Authorizations
+        uri: lb://MP-Authorizations
+        predicates:
+        - Path=/transactions/{transactionId}/authorizations
+        - Method=GET
+        filters:
+        - RewritePath=/transactions/(?<transactionId>.*)/authorizations, /transactions/$\{transactionId}/authorizations
+      - id: MP-Captures
+        uri: lb://MP-Captures
+        predicates:
+        - Path=/transactions/{transactionId}/captures
+        filters:
+        - RewritePath=/transactions/(?<transactionId>.*)/captures, /transactions/$\{transactionId}/captures
+      - id: MP-Captures-withId
+        uri: lb://MP-Captures
+        predicates:
+        - Path=/transactions/{transactionId}/captures/{paymentId}
+        filters:
+        - RewritePath=/transactions/(?<transactionId>.*)/captures/(?<paymentId>.*), /transactions/$\{transactionId}/captures/$\{paymentId}
+      - id: MP-Refunds
+        uri: lb://MP-Refunds
+        predicates:
+        - Path=/transactions/{transactionId}/refunds
+        filters:
+        - RewritePath=/transactions/(?<transactionId>.*)/refunds, /transactions/$\{transactionId}/refunds
+      - id: MP-Refunds-withId
+        uri: lb://MP-Refunds
+        predicates:
+        - Path=/transactions/{transactionId}/refunds/{paymentId}
+        filters:
+        - RewritePath=/transactions/(?<transactionId>.*)/refunds/(?<paymentId>.*), /transactions/$\{transactionId}/refunds/$\{paymentId}       
+      - id: MP-Breakdowns
+        uri: lb://MP-Breakdowns
+        predicates:
+        - Path=/breakdowns/**
+        filters:
+        - RewritePath=/breakdowns/, /
+        - RewritePath=/breakdowns/(?<id>.*), /$\{id}       
+      - id: MP-Balances
+        uri: lb://MP-Balances
+        predicates:
+        - Path=/balances/**
+        filters:
+        - RewritePath=/balances/, /
+        - RewritePath=/balances/(?<id>.*), /$\{id}
+      - id: MP-Payouts
+        uri: lb://MP-Payouts
+        predicates:
+        - Path=/payouts/**
+        filters:
+        - RewritePath=/payouts/, /
+        - RewritePath=/payouts/(?<id>.*), /$\{id}                    
+         
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    registerWithEureka: false      
+  instance:
+    statusPageUrlPath: /actuator/info
+    healthCheckUrlPath: /actuator/health      
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+        
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
