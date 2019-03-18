@@ -68,16 +68,27 @@ spring:
       - id: MP-Breakdowns
         uri: lb://MP-Breakdowns
         predicates:
-        - Path=/breakdowns/**
+        - Path=/breakdowns
         filters:
-        - RewritePath=/breakdowns/, /
-        - RewritePath=/breakdowns/(?<id>.*), /$\{id}       
+        - RewritePath=/breakdowns, /
+        - RewritePath=/breakdowns/(?<id>.*), /$\{id}        
+      - id: MP-Breakdowns-withId
+        uri: lb://MP-Breakdowns
+        predicates:
+        - Path=/breakdowns/{id}
+        filters:
+        - RewritePath=/breakdowns/(?<id>.*), /$\{id}
       - id: MP-Balances
         uri: lb://MP-Balances
         predicates:
-        - Path=/balances/**
+        - Path=/balances
         filters:
-        - RewritePath=/balances/, /
+        - RewritePath=/balances, /
+      - id: MP-Balances-withId
+        uri: lb://MP-Balances
+        predicates:
+        - Path=/balances/{id}
+        filters:
         - RewritePath=/balances/(?<id>.*), /$\{id}
       - id: MP-Payouts
         uri: lb://MP-Payouts
