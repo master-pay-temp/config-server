@@ -76,10 +76,15 @@ spring:
       - id: MP-Payouts
         uri: lb://MP-Payouts
         predicates:
-        - Path=/payouts
+        - Path=/payouts       
         filters:
         - RewritePath=/payouts, /
-        - RewritePath=/payouts/(?<id>.*), /$\{id}                    
+      - id: MP-Payouts-withId
+        uri: lb://MP-Payouts
+        predicates:
+        - Path=/payouts/{id}
+        filters:
+        - RewritePath=/payouts/(?<id>.*), /$\{id}
          
 eureka:
   client:
