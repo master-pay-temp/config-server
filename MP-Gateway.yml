@@ -11,9 +11,9 @@ spring:
       - id: MP-InitTransactions
         uri: lb://MP-InitTransactions
         predicates:
-        - Path=/postPaymentPage**
+        - Path=/postPaymentPage
         filters:
-        - RewritePath=/postPaymentPage/, /
+        - RewritePath=/postPaymentPage, /
       - id: MP-Transactions
         uri: lb://MP-Transactions
         predicates:
