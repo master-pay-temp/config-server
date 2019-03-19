@@ -37,6 +37,11 @@ oauth:
   client_id: mp_request_params_client
   client_secret: ODUgMGEgYzggYjggZDAgOTMgZTAgODEgZTMgYzEgZGEgYWQgM2MgNGYgOWMg
   
+security:
+  oauth2:
+    resource:
+    userInfoUri: http://localhost:50068/validateClient   
+  
 ---
 spring:
   profiles: integration
