@@ -30,6 +30,9 @@ breakdowns:
   
 psp:
   service: MP-PSPSERVICE
+  
+beneficiary:
+  service: MP-BENEFICIARIES  
 
 oauth:
   client_id: mp_captures_client
