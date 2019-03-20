@@ -9,7 +9,7 @@ spring:
     password: guest
   multirabbitmq:
     publicmq:
-      host: localhost:
+      host: localhost
       port: 6672
       username: guest
       password: guest
