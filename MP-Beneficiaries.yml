@@ -77,7 +77,7 @@ spring:
     password: master123
   multirabbitmq:
     publicmq:
-      host: o2c.ovh:
+      host: o2c.ovh
       port: 6672
       username: master-pay
       password: BvSeKJ9yw9759ePHtEqR
