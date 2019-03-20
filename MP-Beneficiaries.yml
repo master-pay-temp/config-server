@@ -7,6 +7,12 @@ spring:
     port: 5672
     username: guest
     password: guest
+  multirabbitmq:
+    publicmq:
+      host: localhost:
+      port: 6672
+      username: guest
+      password: guest
   data:
     mongodb:
       database: mp_beneficiaries
@@ -68,4 +74,10 @@ spring:
     host: o2c.ovh
     port: 5672
     username: master-pay
-    password: master123      
+    password: master123
+  multirabbitmq:
+    publicmq:
+      host: o2c.ovh:
+      port: 6672
+      username: master-pay
+      password: BvSeKJ9yw9759ePHtEqR
