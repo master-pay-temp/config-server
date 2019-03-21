@@ -102,7 +102,13 @@ spring:
         - Path=/payouts/{id}
         filters:
         - RewritePath=/payouts/(?<id>.*), /$\{id}
-         
+      - id: MP-CompleteTransactions
+        uri: lb://MP-CompleteTransactions
+        predicates:
+        - Path=/completeTransaction
+        filters:
+        - RewritePath=/completeTransaction, /completeTransaction
+        
 eureka:
   client:
     serviceUrl:
