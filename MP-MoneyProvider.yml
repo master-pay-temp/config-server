@@ -40,7 +40,7 @@ amqp:
         request: events
 
 smoney:
-  baseUrl: https://rest-pp.s-money.fr/api/sandbox/payments
+  baseUrl: https://rest-pp.s-money.fr/api/sandbox
   accessToken: NTs1MjI7TnJTTFBIRVVxQQ==
   
 ---
