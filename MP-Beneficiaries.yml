@@ -7,12 +7,6 @@ spring:
     port: 5672
     username: guest
     password: guest
-  multirabbitmq:
-    publicmq:
-      host: localhost
-      port: 6672
-      username: guest
-      password: guest
   data:
     mongodb:
       database: mp_beneficiaries
@@ -45,7 +39,10 @@ amqp:
           request: beneficiary_created_response_queue
         updated:
           request: beneficiary_updated_response_queue
-
+    exchange:
+      completed:
+        status_update: beneficiary_notifications
+        
   events:
     queue:
       created:
@@ -61,6 +58,9 @@ security:
     resource:
       userInfoUri: http://localhost:50068/validateClient
 
+marketplace:
+  notification:
+    service: MP-MarketNotifications
 
 ---
 spring:
@@ -75,9 +75,3 @@ spring:
     port: 5672
     username: master-pay
     password: master123
-  multirabbitmq:
-    publicmq:
-      host: o2c.ovh
-      port: 6672
-      username: master-pay
-      password: BvSeKJ9yw9759ePHtEqR
