@@ -1,0 +1,44 @@
+server:
+  port: 50082
+  
+spring:
+  multirabbitmq:
+    rabbitmq:
+      defaultConnection: true
+      host: localhost
+      port: 6672
+  
+    privateQueue:
+      host: localhost
+      port: 5672
+        
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    statusPageUrlPath: /actuator/info
+    healthCheckUrlPath: /actuator/health      
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+param:
+  service: MP-PARAMS
+   
+amqp:
+  marketplace:
+    notifications:
+      queue:
+        marketplace_message_notifications_queue
+      exchange:
+        publish:
+           marketplace_published_messages
+        
+  events:
+    queue:
+      created:
+        request: createad_event_queue
+    exchange:
+      created: created_events
+    key:
+      created:
+        request: events                  
