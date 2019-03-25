@@ -1,0 +1,69 @@
+server:
+  port: 50043
+  
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+  data:
+    mongodb:
+      database: mp_customers
+      host: localhost
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"    
+             
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    statusPageUrlPath: /actuator/info
+    healthCheckUrlPath: /actuator/health      
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+param:
+  service: MP-TRANSACTIONS
+
+oauth:
+  client_id: mp_customers_client
+  client_secret: NTAgYTAgNzUgYTIgZTkgMDEgN2YgZmQgYjcgZjcgZTAgYjggY2EgM2QgZGEg
+
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:50068/validateClient
+  
+amqp: 
+  customers:
+    queue:
+      customer:
+        addPaymentMean:
+          request: customers_response_queue
+        
+  events:
+    queue:
+      created:
+        request: createad_event_queue
+    exchange:
+      created: created_events
+    key:
+      created:
+        request: events                  
+
+---
+spring:
+  profiles: integration
+  data:
+    mongodb:
+      database: mp_customers
+      host: localhost
+      port: 27018
+  rabbitmq:
+    host: o2c.ovh
+    port: 5672
+    username: master-pay
+    password: master123
