@@ -38,7 +38,12 @@ amqp:
     key:
       created:
         request: events
-
+        
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:50068/validateClient
+      
 smoney:
   baseUrl: https://rest-pp.s-money.fr/api/sandbox
   accessToken: NTs1MjI7TnJTTFBIRVVxQQ==
