@@ -66,6 +66,9 @@ beneficiary:
 auth:
   service: MP-AUTHSERVER
   path: /oauth/token  
+  
+smoney:
+  service: MP-MONEYPROVIDER
 
 ---
 spring:
