@@ -7,10 +7,8 @@ spring:
       defaultConnection: true
       host: localhost
       port: 6672
-  
-    privateQueue:
-      host: localhost
-      port: 5672
+      username: guest
+      password: guest
         
 eureka:
   client:
