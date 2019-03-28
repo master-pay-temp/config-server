@@ -107,7 +107,10 @@ oauth:
 
 auth:
   service: MP-AUTHSERVER
-  path: /oauth/token        
+  path: /oauth/token
+  
+market-notifications:
+  service: MP-MARKETNOTIFICATIONS
       
 ---
 spring:
