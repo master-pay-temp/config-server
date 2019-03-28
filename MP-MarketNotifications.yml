@@ -20,6 +20,11 @@ eureka:
     statusPageUrlPath: /actuator/info
     healthCheckUrlPath: /actuator/health      
     instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:50068/validateClient    
 
 param:
   service: MP-PARAMS
