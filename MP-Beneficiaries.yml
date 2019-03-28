@@ -57,6 +57,10 @@ security:
   oauth2:
     resource:
       userInfoUri: http://localhost:50068/validateClient
+      
+oauth:
+  client_id: mp_beneficiary_client
+  client_secret: MjYgNDcgZjYgZTAgMDcgYzUgZmIgODYgNmMgNzIgOTkgMmEgMGYgN2EgNWEg      
 
 marketplace:
   notification:
