@@ -100,6 +100,14 @@ security:
   oauth2:
     resource:
       userInfoUri: http://localhost:50068/validateClient
+
+oauth:
+  client_id: mp_transaction_client
+  client_secret: YzQgODYgZWEgN2EgMjkgNjUgMWQgOWYgODYgMTAgOTIgMmEgNDIgZGUgNDMg
+
+auth:
+  service: MP-AUTHSERVER
+  path: /oauth/token        
       
 ---
 spring:
