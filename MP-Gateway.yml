@@ -7,6 +7,16 @@ spring:
       discovery: 
         locator: 
           enabled: true
+      globalcors:
+        corsConfigurations:
+           '[/**]':
+              allowedOrigins: "*"
+              allowedMethods:
+                - GET     
+                - POST
+                - PUT
+                - DELETE
+                - OPTIONS           
       routes:
       - id: MP-InitTransactions
         uri: lb://MP-InitTransactions
