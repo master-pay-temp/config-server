@@ -40,9 +40,9 @@ security:
 amqp: 
   customers:
     queue:
-      customer:
+      transaction:
         addPaymentMean:
-          request: customers_response_queue
+          response: transaction_added-payment-mean_customer_response_queue
         
   events:
     queue:
