@@ -38,6 +38,7 @@ amqp:
     exchange:
       updated:
         transaction: updated_transaction
+        transaction-complete: updated_transaction_complete
       insert:
         customer: completed_transaction
     queue:
