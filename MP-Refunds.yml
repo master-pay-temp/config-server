@@ -33,6 +33,12 @@ transaction:
 
 psp:
   service: MP-PSPSERVICE
+
+breakdowns:
+  service: MP-BREAKDOWNS
+  
+beneficiary:
+  service: MP-BENEFICIARIES
       
 oauth:
   client_id: mp_refunds_client
