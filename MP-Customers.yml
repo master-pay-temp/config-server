@@ -52,7 +52,11 @@ amqp:
       created: created_events
     key:
       created:
-        request: events                  
+        request: events         
+        
+logging:
+  level:
+    org.springframework.data.mongodb.core.ReactiveMongoTemplate: DEBUG        
 
 ---
 spring:
