@@ -39,6 +39,9 @@ breakdowns:
   
 beneficiary:
   service: MP-BENEFICIARIES
+  
+capture:
+  service: MP-CAPTURES  
       
 oauth:
   client_id: mp_refunds_client
