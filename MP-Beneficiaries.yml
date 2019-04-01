@@ -64,7 +64,7 @@ auth:
       
 oauth:
   client_id: mp_beneficiary_client
-  client_secret: MjYgNDcgZjYgZTAgMDcgYzUgZmIgODYgNmMgNzIgOTkgMmEgMGYgN2EgNWEg      
+  client_secret: MjYgNDcgZjYgZTAgMDcgYzUgZmIgODYgNmMgNzIgOTkgMmEgMGYgN2EgNWEg
 
 marketplace:
   notification:
