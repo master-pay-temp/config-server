@@ -33,6 +33,9 @@ psp:
   
 beneficiary:
   service: MP-BENEFICIARIES  
+  
+transaction:
+  service: MP-TRANSACTIONS  
 
 oauth:
   client_id: mp_captures_client
