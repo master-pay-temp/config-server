@@ -7,9 +7,13 @@ spring:
     port: 2525
     username: fb876a89e18100
     password: 0b16397ff51d54
-    starttls:
-      enable: true
-
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable:true
+          starttls:
+            enable: true  
     
   multirabbitmq:
     rabbitmq:
