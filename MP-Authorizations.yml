@@ -60,6 +60,9 @@ amqp:
     exchange:
       completed:
         authorization: completed_authorization
+      created:
+        authorization: created_authorization
+
     queue:
       authorization:
         completed:
