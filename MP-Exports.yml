@@ -1,0 +1,53 @@
+server:
+  port: 50023
+
+spring:
+  data:
+    mongodb:
+      database: mp_exports
+      host: localhost  
+
+logging:
+  level:
+    org.springframework.data.mongodb.core.ReactiveMongoTemplate: DEBUG
+   
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"    
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    statusPageUrlPath: /actuator/info
+    healthCheckUrlPath: /actuator/health      
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+  
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:50068/validateClient
+
+oauth:
+  client_id: mp_exports_client
+  client_secret: Y2MgZjEgOWMgMTYgYzggMmMgOTEgZGMgYjMgZmIgYzUgMjQgNGQgNzIgZmUg
+
+auth:
+  service: MP-AUTHSERVER
+  path: /oauth/token  
+  
+---
+spring:
+  profiles: integration
+  data:
+    mongodb:
+      port: 27018
+  rabbitmq:
+    host: o2c.ovh
+    port: 5672
+    username: master-pay
+    password: master123
