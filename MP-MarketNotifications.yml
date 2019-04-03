@@ -3,7 +3,7 @@ server:
   
 spring:
   mail:
-    host: smtp.gmail.com
+    host: smtp.mailtrap.io
     port: 2525
     username: fb876a89e18100
     password: 0b16397ff51d54
