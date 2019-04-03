@@ -54,6 +54,12 @@ amqp:
         created:
           response: breakdown_created_transaction_response_queue
           
+      authorization:
+        created:
+          response: authorization_created_transaction_response_queue
+        completed:
+          response: authorization_completed_response_queue
+          
   events:
     queue:
       created:
@@ -63,15 +69,6 @@ amqp:
     key:
       created:
         request: events          
-
-  authorizations:
-    exchange:
-      completed:
-        authorization: completed_authorization
-    queue:
-      authorization:
-        completed:
-          response: authorization_completed_response_queue
 
   captures:
     exchange:
