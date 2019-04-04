@@ -58,3 +58,19 @@ amqp:
     key:
       created:
         request: events                  
+
+---
+spring:
+  profiles: integration
+  mail:
+    host: smtp.mailtrap.io
+    port: 2525
+    username: fb876a89e18100
+    password: 0b16397ff51d54
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: false
+          starttls:
+            enable: true  
