@@ -1,6 +1,6 @@
 server:
   url: http://localhost:${server.port}
-  port: 50033
+  port: 51033
   
 spring:
   rabbitmq:
