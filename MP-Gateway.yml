@@ -130,6 +130,12 @@ spring:
         - Path=/completeTransaction
         filters:
         - RewritePath=/completeTransaction, /completeTransaction
+      - id: MP-MarketPlaces
+        uri: lb://MP-MarketPlaces
+        predicates:
+        - Path=/marketplace
+        filters:
+        - RewritePath=/marketplace, /
         
 eureka:
   client:
