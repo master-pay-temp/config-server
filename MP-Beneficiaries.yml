@@ -1,5 +1,5 @@
 server:
-  port: 50073
+  port: 51073
   
 spring:
   rabbitmq:
