@@ -48,11 +48,9 @@ param:
 amqp:
   marketplace:
     notifications:
-      queue:
-        marketplace_message_notifications_queue
+      queue: marketplace_message_notifications_queue
       exchange:
-        publish:
-           marketplace_published_messages
+        publish: marketplace_published_messages
         
   events:
     queue:
