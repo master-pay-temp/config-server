@@ -50,6 +50,12 @@ spring:
         - Path=/oauth/token
         filters:
         - RewritePath=/oauth/token, /oauth/token
+      - id: MP-AuthServer-validate
+        uri: lb://MP-AuthServer        
+        predicates:
+        - Path=/validateClient
+        filters:
+        - RewritePath=/validateClient, /validateClient
       - id: MP-Authorizations
         uri: lb://MP-Authorizations
         predicates:
