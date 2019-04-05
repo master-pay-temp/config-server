@@ -44,7 +44,7 @@ amqp:
     queue:
       default-payout-rules:
         created:
-          response: default_payout-rules_updated_response_queue
+          response: default_marketplace-payout-rules_updated_response_queue
   events:
     queue:
       created:
