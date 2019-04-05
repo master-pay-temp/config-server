@@ -42,7 +42,7 @@ amqp:
 security:
   oauth2:
     resource:
-      userInfoUri: http://localhost:50068/validateClient
+      userInfoUri: http://localhost:8880/validateClient
       
 smoney:
   baseUrl: https://rest-pp.s-money.fr/api/sandbox
