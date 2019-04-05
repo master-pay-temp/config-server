@@ -30,7 +30,7 @@ eureka:
 security:
   oauth2:
     resource:
-      userInfoUri: http://localhost:50068/validateClient
+      userInfoUri: http://localhost:8880/validateClient
 
 oauth:
   client_id: mp_exports_client
