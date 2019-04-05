@@ -1,5 +1,5 @@
 server:
-  port: 50082
+  port: 51082
   
 spring:
   mail:
