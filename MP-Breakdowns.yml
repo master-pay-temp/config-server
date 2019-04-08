@@ -13,9 +13,9 @@ spring:
       database: mp_breakdowns
       host: localhost
       
-#logging:
-#  level:
-#    org.springframework.data.mongodb.core.ReactiveMongoTemplate: DEBUG
+logging:
+  level:
+    org.springframework.data.mongodb.core.ReactiveMongoTemplate: DEBUG
    
 management:
   endpoints:
