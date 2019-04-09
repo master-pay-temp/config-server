@@ -107,7 +107,11 @@ auth:
   
 market-notifications:
   service: MP-MARKETNOTIFICATIONS
-      
+
+export:
+  directory:
+    output: workspace
+
 ---
 spring:
   profiles: integration
@@ -124,3 +128,7 @@ spring:
 
 server:
   url: http://o2c.ovh:${server.port}
+  
+export:
+  directory:
+    output: exportFiles  
