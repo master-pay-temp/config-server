@@ -40,6 +40,11 @@ auth:
   service: MP-AUTHSERVER
   path: /oauth/token  
 
+
+marketplace:
+  notification:
+    service: MP-MarketNotifications
+
 amqp:
   events:
     queue:
