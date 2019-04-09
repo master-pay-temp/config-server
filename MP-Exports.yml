@@ -39,7 +39,18 @@ oauth:
 auth:
   service: MP-AUTHSERVER
   path: /oauth/token  
-  
+
+amqp:
+  events:
+    queue:
+      created:
+        request: createad_event_queue
+    exchange:
+      created: created_events
+    key:
+      created:
+        request: events    
+
 ---
 spring:
   profiles: integration
