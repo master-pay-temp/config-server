@@ -72,6 +72,15 @@ amqp:
         completed:
           response: authorization_completed_response_queue   
 
+  exports:
+    exchange:
+      completed: 
+         export-data: export_data
+    queue:
+      export:
+        request: export_authorizations_request_queue
+    key: EXPORT_AUTHORIZATIONS_REQUEST   
+
 export:
   directory:
     output: workspace
