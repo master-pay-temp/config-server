@@ -88,6 +88,15 @@ amqp:
         completed:
           response: refund_completed_response_queue              
 
+  exports:
+    exchange:
+      completed: 
+         export-data: export_data
+    queue:
+      export:
+        request: export_transactions_request_queue
+    key: EXPORT_TRANSACTIONS_REQUEST   
+
 environment:
   nifi-url: http://localhost:60056
   callback-url: ${environment.nifi-url}/completeTransactionCallback
