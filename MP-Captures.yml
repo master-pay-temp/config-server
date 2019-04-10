@@ -76,6 +76,15 @@ amqp:
       created:
         request: events
         
+  exports:
+    exchange:
+      completed: 
+         export-data: export_data
+    queue:
+      export:
+        request: export_captures_request_queue
+    key: EXPORT_CAPTURES_REQUEST    
+        
 export:
   directory:
     output: workspace        
