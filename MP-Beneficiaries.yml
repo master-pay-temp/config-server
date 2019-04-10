@@ -40,7 +40,7 @@ amqp:
         updated:
           request: beneficiary_updated_response_queue
           payout-rules-marketplace:
-            request: default_marketplace-payout-rules_updated_response_queue
+            request: beneficiary_marketplace-payout-rules_updated_response_queue
     exchange:
       completed:
         status_update: beneficiary_notifications
