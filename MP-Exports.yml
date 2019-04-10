@@ -55,7 +55,15 @@ amqp:
     key:
       created:
         request: events    
-
+  exports:
+    exchange:
+      completed: 
+         export-data: export_data
+    queue:
+      export:
+        request: export_data_response_queue
+    key: EXPORT_RESPONSE 
+    
 ---
 spring:
   profiles: integration
