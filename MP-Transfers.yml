@@ -53,7 +53,7 @@ amqp:
          export-data: export_data
     queue:
       export:
-        request: export_trasfers_request_queue
+        request: export_transfers_request_queue
     key: EXPORT_TRANSFERS_REQUEST   
     
 export:
