@@ -53,8 +53,8 @@ amqp:
          export-data: export_data
     queue:
       export:
-        request: export_refunds_request_queue
-    key: EXPORT_REFUNDS_REQUEST   
+        request: export_trasfers_request_queue
+    key: EXPORT_TRANSFERS_REQUEST   
     
 export:
   directory:
