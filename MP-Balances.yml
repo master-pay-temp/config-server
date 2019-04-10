@@ -38,6 +38,11 @@ amqp:
       created:
         balance: created_balance
 
+    queue:
+      combine:
+        created:
+          response: combine_created_balance_response_queue
+
   events:
     queue:
       created:
