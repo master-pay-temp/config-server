@@ -54,8 +54,8 @@ amqp:
          export-data: export_data
     queue:
       export:
-        request: export_balances_request_queue
-    key: EXPORT_BALANCES_REQUEST   
+        request: export_payouts_request_queue
+    key: EXPORT_PAYOUTS_REQUEST   
 
 export:
   directory:
