@@ -71,8 +71,20 @@ amqp:
       created: created_events
     key:
       created:
-        request: events   
+        request: events  
         
+  exports:
+    exchange:
+      completed: 
+         export-data: export_data
+    queue:
+      export:
+        request: export_refunds_request_queue
+    key: EXPORT_REFUNDS_REQUEST   
+    
+export:
+  directory:
+    output: workspace      
 ---
 spring:
   profiles: integration
@@ -90,3 +102,7 @@ spring:
       
   server:
     url: http://o2c.ovh:${server.port}
+
+export:
+  directory:
+    output: exportFiles  
