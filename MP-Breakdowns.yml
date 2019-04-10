@@ -48,7 +48,11 @@ amqp:
           
       refund:
         completed:
-          response: refund_completed_breakdown_response_queue          
+          response: refund_completed_breakdown_response_queue 
+          
+      combine:
+        created:
+          response: combine_created_breakdown_response_queue
 
   events:
     queue:
