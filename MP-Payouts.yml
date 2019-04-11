@@ -75,7 +75,10 @@ beneficiary:
   
 auth:
   service: MP-AUTHSERVER
-  path: /oauth/token  
+  path: /oauth/token
+  
+combine:
+  service: MP-COMBINE
 
 ---
 spring:
