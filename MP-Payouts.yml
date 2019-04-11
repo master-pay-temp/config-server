@@ -71,7 +71,7 @@ oauth:
   client_secret: ZmUgYWYgZTcgMGEgOTMgMTMgN2YgOTMgY2EgYzYgOTUgNTUgZmEgYmIgOGMg
   
 beneficiary:
-  service: MP-BENEFICIARY
+  service: MP-BENEFICIARIES
   
 auth:
   service: MP-AUTHSERVER
