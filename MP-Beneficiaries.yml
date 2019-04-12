@@ -75,6 +75,8 @@ marketplace:
 smoney:
   service: MP-MoneyProvider
     
+marketplaces:
+  service: MP-MarketPlaces
 
 ---
 spring:
