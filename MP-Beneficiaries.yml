@@ -71,6 +71,10 @@ oauth:
 marketplace:
   notification:
     service: MP-MarketNotifications
+    
+smoney:
+  service: MP-MoneyProvider
+    
 
 ---
 spring:
