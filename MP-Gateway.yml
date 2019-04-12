@@ -136,6 +136,12 @@ spring:
         - Path=/marketplace
         filters:
         - RewritePath=/marketplace, /
+       - id: MP-Exports
+        uri: lb://MP-Exports
+        predicates:
+        - Path=/exports
+        filters:
+        - RewritePath=/exports, /exports
         
 eureka:
   client:
