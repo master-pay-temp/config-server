@@ -136,7 +136,7 @@ spring:
         - Path=/marketplace
         filters:
         - RewritePath=/marketplace, /
-       - id: MP-Exports
+      - id: MP-Exports
         uri: lb://MP-Exports
         predicates:
         - Path=/exports
