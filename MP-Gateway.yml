@@ -159,3 +159,9 @@ management:
     web:
       exposure:
         include: "*"
+
+#OAuth config
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:8880/validateClient        
