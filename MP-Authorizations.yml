@@ -105,3 +105,24 @@ server:
 export:
   directory:
     output: exportFiles  
+    
+---
+spring:
+  profiles: qa
+  data:
+    mongodb:
+      database: mp_authorizations
+      host: localhost
+      port: 27018
+  rabbitmq:
+    host: o2c.ovh
+    port: 5672
+    username: master-pay
+    password: master123      
+
+server:
+  url: http://qa.o2c.ovh:${server.port}
+  
+export:
+  directory:
+    output: exportFiles      
