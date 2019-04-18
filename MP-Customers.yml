@@ -71,3 +71,17 @@ spring:
     port: 5672
     username: master-pay
     password: master123
+    
+---
+spring:
+  profiles: qa
+  data:
+    mongodb:
+      database: mp_customers
+      host: localhost
+      port: 27018
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: master-pay
+    password: master123    
