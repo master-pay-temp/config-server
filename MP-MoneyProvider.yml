@@ -55,4 +55,14 @@ spring:
     host: o2c.ovh
     port: 5672
     username: master-pay
-password: master123  
+    password: master123  
+
+
+---
+spring:
+  profiles: qa
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: master-pay
+    password: master123  
