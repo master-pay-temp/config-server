@@ -100,7 +100,7 @@ spring:
 server:
   url: http://o2c.ovh:${server.port}
   
-  ---
+---
 spring:
   profiles: qa
   data:
