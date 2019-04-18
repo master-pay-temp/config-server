@@ -99,3 +99,20 @@ spring:
 
 server:
   url: http://o2c.ovh:${server.port}
+  
+  ---
+spring:
+  profiles: qa
+  data:
+    mongodb:
+      database: mp_breakdowns
+      host: localhost
+      port: 27018
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: master-pay
+    password: master123      
+
+server:
+  url: http://qa.o2c.ovh:${server.port}
