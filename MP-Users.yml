@@ -1,0 +1,96 @@
+server:
+  url: http://localhost:${server.port}
+  port: 51051
+  
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  data:
+    mongodb:
+      database: mp_users
+      host: localhost    
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    statusPageUrlPath: /actuator/info
+    healthCheckUrlPath: /actuator/health      
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+
+beneficiary:
+  service: MP-BENEFICIARIES  
+  
+marketplace:
+  service: MP-MARKETPLACES  
+
+oauth:
+  client_id: mp_users_client
+  client_secret: ZmUgNDQgMDMgYWEgYWUgYTQgNGYgNDIgOWMgY2UgNGQgNzMgNTUgZjIgMjkg
+
+auth:
+  service: MP-AUTHSERVER
+  path: /oauth/token  
+  
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:8880/validateClient  
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"    
+amqp:
+  events:
+    queue:
+      created:
+        request: createad_event_queue
+    exchange:
+      created: created_events
+    key:
+      created:
+        request: events
+        
+---
+spring:
+  profiles: integration
+  data:
+    mongodb:
+      database: mp_users
+      host: localhost
+      port: 27018
+  rabbitmq:
+    host: o2c.ovh
+    port: 5672
+    username: master-pay
+    password: master123      
+
+server:
+  url: http://o2c.ovh:${server.port}
+
+export:
+  directory:
+    output: exportFiles
+    
+---
+spring:
+  profiles: qa
+  data:
+    mongodb:
+      database: mp_users
+      host: localhost
+      port: 27018     
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: master-pay
+    password: master123      
+
+server:
+  url: http://qa.o2c.ovh:${server.port}
