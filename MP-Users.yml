@@ -29,7 +29,7 @@ marketplace:
   service: MP-MARKETPLACES  
 
 oauth:
-  client_id: mp_users_client
+  client_id: mp_user_client
   client_secret: ZmUgNDQgMDMgYWEgYWUgYTQgNGYgNDIgOWMgY2UgNGQgNzMgNTUgZjIgMjkg
 
 auth:
