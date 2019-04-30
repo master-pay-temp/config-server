@@ -56,7 +56,11 @@ amqp:
     key:
       created:
         request: events
-        
+
+marketplace:
+  notification:
+    service: MP-MarketNotifications
+    
 ---
 spring:
   profiles: integration
