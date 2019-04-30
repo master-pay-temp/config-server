@@ -27,6 +27,8 @@ beneficiary:
   
 marketplace:
   service: MP-MARKETPLACES  
+  notification:
+    service: MP-MarketNotifications
 
 oauth:
   client_id: mp_user_client
@@ -56,10 +58,6 @@ amqp:
     key:
       created:
         request: events
-
-marketplace:
-  notification:
-    service: MP-MarketNotifications
     
 ---
 spring:
