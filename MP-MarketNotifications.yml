@@ -3,10 +3,10 @@ server:
   
 spring:
   mail:
-    host: in-v3.mailjet.com
-    port: 25
-    username: f5f4877d3e6a7766475fdf4477ff5adb
-    password: 8ba7aa90e3d01e062f02ff14a24aeb77
+    host: smtp.mailtrap.io
+    port: 2525
+    username: 15adcc315b6b66
+    password: 7a16bc810c2129
     properties:
       mail:
         smtp:
