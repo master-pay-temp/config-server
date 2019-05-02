@@ -18,14 +18,14 @@ spring:
                 - DELETE
                 - OPTIONS           
       routes:
-      - id: MP-InitTransactions
-        uri: lb://MP-InitTransactions
+      - id: MP-PageRequests
+        uri: lb://MP-PageRequests
         predicates:
         - Path=/paymentPages
         filters:
         - RewritePath=/paymentPages, /paymentPages
-      - id: MP-InitTransactions-token
-        uri: lb://MP-InitTransactions
+      - id: MP-PageRequests-token
+        uri: lb://MP-PageRequests
         predicates:
         - Path=/token
         filters:
@@ -124,8 +124,8 @@ spring:
         - Path=/payouts/{id}
         filters:
         - RewritePath=/payouts/(?<id>.*), /$\{id}
-      - id: MP-CompleteTransactions
-        uri: lb://MP-CompleteTransactions
+      - id: MP-PageRequests-complete
+        uri: lb://MP-PageRequests
         predicates:
         - Path=/completeTransaction
         filters:
