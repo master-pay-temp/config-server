@@ -38,12 +38,10 @@ amqp:
     exchange:
       created:
         init-transaction: created_init_transaction
-		
   complete-transactions:
     exchange:
       completed:
-	    transaction: completed_transaction		
-
+	transaction: completed_transaction
   events:
     queue:
       created:
