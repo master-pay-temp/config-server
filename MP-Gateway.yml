@@ -166,12 +166,25 @@ spring:
         - Path=/beneficiaries/{beneficiaryId}/users
         filters:
         - RewritePath=/beneficiaries/(?<beneficiaryId>.*)/users, /beneficiaries/$\{beneficiaryId}/users
+      - id: MP-Users-beneficiaries-withId
+        uri: lb://MP-Users
+        predicates:
+        - Path=/beneficiaries/{beneficiaryId}/users/{userId}
+        filters:
+        - RewritePath=/beneficiaries/(?<beneficiaryId>.*)/users/(?<userId>.*), /beneficiaries/$\{beneficiaryId}/users/$\{userId}
       - id: MP-Users-marketplaces
         uri: lb://MP-Users
         predicates:
         - Path=/marketplaces/{marketplaceId}/users
         filters:
         - RewritePath=/marketplaces/(?<marketplaceId>.*)/users, /marketplaces/$\{marketplaceId}/users
+      - id: MP-Users-marketplaces-withId
+        uri: lb://MP-Users
+        predicates:
+        - Path=/marketplaces/{marketplaceId}/users/{userId}
+        filters:
+        - RewritePath=/marketplaces/(?<marketplaceId>.*)/users/(?<userId>.*), /marketplaces/$\{marketplaceId}/users/$\{userId}
+        
         
 eureka:
   client:
