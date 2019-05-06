@@ -136,8 +136,8 @@ spring:
         - Path=/payouts/{id}
         filters:
         - RewritePath=/payouts/(?<id>.*), /$\{id}
-      - id: MP-InitTransactions-complete
-        uri: lb://MP-InitTransactions
+      - id: MP-CompleteTransactions
+        uri: lb://MP-CompleteTransactions
         predicates:
         - Path=/completeTransaction
         filters:
