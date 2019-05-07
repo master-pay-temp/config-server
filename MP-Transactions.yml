@@ -36,9 +36,10 @@ eureka:
 amqp:
   transactions:
     exchange:
-      updated:
-        transaction: updated_transaction
-        transaction-complete: updated_transaction_complete
+      transaction:
+        updated: updated_transaction
+        completed: updated_transaction_complete
+        created: created_transaction
     queue:
       init-transaction:
         created:
