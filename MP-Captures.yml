@@ -62,6 +62,10 @@ amqp:
         status:
           updated:
             request: create_capture_response_queue
+            
+      authorization:
+        completed:
+          response: authorization_completed_capture_response_queue
     exchange:
       completed:
         capture: completed_capture            
