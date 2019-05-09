@@ -60,9 +60,9 @@ amqp:
         completed: completed_authorization
         created: created_authorization
     queue:
-      authorization:
+      transaction:
         completed:
-          response: authorization_completed_response_queue
+          response: transaction_completed_authorization_response_queue
 
   exports:
     exchange:
