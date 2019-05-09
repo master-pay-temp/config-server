@@ -44,12 +44,6 @@ oauth:
   client_secret: Y2QgZWEgOWMgYzAgNzkgNDQgZGMgYjEgMDUgMTcgNjYgNWEgZDQgOGEgOTEg  
    
 amqp:
-  transactions:
-    queue:
-      authorization:
-        created:
-          request: authorization_created_request_queue
-
   events:
     queue:
       created:
@@ -62,11 +56,9 @@ amqp:
           
   authorizations:
     exchange:
-      completed:
-        authorization: completed_authorization
-      created:
-        authorization: created_authorization
-
+      authorization:
+        completed: completed_authorization
+        created: created_authorization
     queue:
       authorization:
         completed:
