@@ -70,7 +70,7 @@ amqp:
     queue:
       authorization:
         completed:
-          response: authorization_completed_response_queue   
+          response: authorization_completed_response_queue
 
   exports:
     exchange:
