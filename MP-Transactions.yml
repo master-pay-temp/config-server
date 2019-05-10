@@ -46,7 +46,7 @@ amqp:
            response: init_transaction_created_response_queue
       transaction:
         completed:
-          request: transaction_completed_response_queue
+          request: transaction_completed_transaction_response_queue
       payment:
         completed:
           response: payment_completed_transaction_response_queue
@@ -59,7 +59,7 @@ amqp:
         created:
           response: authorization_created_transaction_response_queue
         completed:
-          response: authorization_completed_response_queue
+          response: authorization_completed_transaction_response_queue
           
   events:
     queue:
