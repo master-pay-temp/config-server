@@ -83,7 +83,7 @@ spring:
       host: localhost
       port: 27018
   rabbitmq:
-    host: o2c.ovh
+    host: rabbitmq.o2c.ovh
     port: 5672
     username: master-pay
     password: master123      
