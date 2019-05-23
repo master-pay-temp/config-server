@@ -189,7 +189,7 @@ management:
 spring:
   profile: docker
   server:
-    port: ${PORT:8880}
+    port: ${SERVER_PORT:8880}
   
 eureka:
   client:
