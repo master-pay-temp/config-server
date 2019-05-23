@@ -44,7 +44,16 @@ amqp:
     exchange:
       completed:
         status_update: beneficiary_notifications
-        
+      beneficiary:
+        created: created_beneficiary_production
+        updated: updated_beneficiary_production
+      beneficiary-default-payout-rules:
+        updated: updated_beneficiary_default_payout_rules
+      beneficiary-status:
+        updated: updated_beneficiary_status
+      beneficiary-transaction:
+        added: added_beneficiary_transaction
+    
   events:
     queue:
       created:
