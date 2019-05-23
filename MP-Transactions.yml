@@ -40,6 +40,16 @@ amqp:
         updated: updated_transaction
         completed: updated_transaction_complete
         created: created_transaction
+      transaction-authorization:
+        added: added_transaction_authorization
+      transaction-capture:
+        added: added_transaction_capture
+      transaction-payment-method:
+        updated: updated_transaction_payment_method
+      transaction-payment:
+        updated: updated_transaction_payment
+      transaction-refund:
+        added: added_transaction_refund
     queue:
       init-transaction:
         created:
