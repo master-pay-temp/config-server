@@ -54,8 +54,8 @@ amqp:
         updated: updated_beneficiary_default_payout_rules
       beneficiary-status:
         updated: updated_beneficiary_status
-      beneficiary-transaction:
-        decomposed: decomposed_beneficiary_transaction
+      beneficiary-transaction-capture:
+        decomposed: decomposed_beneficiary_transaction_capture
     
   events:
     queue:
