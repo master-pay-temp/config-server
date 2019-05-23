@@ -41,9 +41,9 @@ amqp:
           request: beneficiary_updated_response_queue
           payout-rules-marketplace:
             request: beneficiary_marketplace-payout-rules_updated_response_queue
-      transaction-payment:
-        updated:
-          response: transaction_payment_updated_beneficiary_response_queue
+      transaction-capture:
+        added:
+          response: transaction_capture_added_beneficiary_response_queue
     exchange:
       completed:
         status_update: beneficiary_notifications
