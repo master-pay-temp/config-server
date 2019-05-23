@@ -44,6 +44,10 @@ amqp:
       transaction-capture:
         added:
           response: transaction_capture_added_beneficiary_response_queue
+      transaction-refund:
+        added:
+          response: transaction_refund_added_beneficiary_response_queue
+        
     exchange:
       completed:
         status_update: beneficiary_notifications
@@ -56,6 +60,8 @@ amqp:
         updated: updated_beneficiary_status
       beneficiary-transaction-capture:
         decomposed: decomposed_beneficiary_transaction_capture
+      beneficiary-transaction-refund:
+        decomposed: decomposed_beneficiary_transaction_refund
     
   events:
     queue:
