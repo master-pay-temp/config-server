@@ -55,7 +55,7 @@ amqp:
       beneficiary-status:
         updated: updated_beneficiary_status
       beneficiary-transaction:
-        added: added_beneficiary_transaction
+        decomposed: decomposed_beneficiary_transaction
     
   events:
     queue:
