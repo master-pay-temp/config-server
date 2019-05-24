@@ -130,6 +130,11 @@ eureka:
     instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
     prefer-ip-address: true
 
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://auth-service:8880/validateClient  
+
 webapp:
   url: ${WEBAPP_URL}
   
