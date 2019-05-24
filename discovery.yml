@@ -15,3 +15,20 @@ logging:
   level:
     com.netflix.discovery: 'ON'
     org.springframework.cloud: 'DEBUG'
+
+---
+spring:
+  profiles: docker
+
+server:
+  port: ${PORT:8761}
+
+eureka:
+  instance:
+    hostname: ${EUREKA_HOSTNAME:eureka-server}
+  client:
+    prefer-ip-address: true
+    registerWithEureka: false
+    fetchRegistry: false
+  
+  
