@@ -189,10 +189,10 @@ management:
 spring:
   profile: docker
   server:
-    port: ${SERVER_PORT:8880}
+    port: ${port:8880}
   
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://${EUREKA-SERVER}:${EUREKA-PORT:8761}/eureka/  
+      defaultZone: http://${EUREKA_SERVER}:${EUREKA_PORT:8761}/eureka/  
   
