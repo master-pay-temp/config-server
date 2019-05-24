@@ -65,3 +65,25 @@ spring:
     port: 5672
     username: master-pay
     password: master123      
+    
+---
+spring:
+  profiles: docker
+ 
+  data:
+    mongodb:
+      host: ${MONGO_SERVER:o2c-mongodb}
+      port: ${MONGO_PORT:27018}
+  rabbitmq:
+    host: ${RABBIT_SERVER:rabbitmq}
+    port: ${RABBIT_PORT:5672}
+    username: ${RABBITMQ_DEFAULT_PASS}
+    password: ${RABBITMQ_DEFAULT_USER}      
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${EUREKA_SERVER:eureka-server}:${EUREKA_PORT:8761}/eureka/
+  instance:   
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    prefer-ip-address: true  
