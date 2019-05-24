@@ -133,7 +133,7 @@ eureka:
 security:
   oauth2:
     resource:
-      userInfoUri: http://auth-service:8880/validateClient  
+      userInfoUri: http://${API_GATEWAY_SERVER:api-gateway-server}:${API_GATEWAY_PORT:8880}/validateClient  
 
 webapp:
   url: ${WEBAPP_URL}
