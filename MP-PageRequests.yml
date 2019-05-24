@@ -122,10 +122,6 @@ spring:
     username: ${RABBITMQ_DEFAULT_USER}
     password: ${RABBITMQ_DEFAULT_PASS}
     
-    
-server:
-  port: ${PORT:8080}
-    
 eureka:
   client:
     serviceUrl:
