@@ -108,3 +108,28 @@ spring:
 webapp:
   url: http://qa.o2c.ovh
   
+---
+spring:
+  profiles: docker
+  data:
+    mongodb:
+      database: mp_page_request
+      host: o2c-mongodb
+      port: 27018
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: ${RABBITMQ_DEFAULT_PASS}
+    password: ${RABBITMQ_DEFAULT_USER}      
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${EUREKA_SERVER:eureka-server}:${EUREKA_PORT:8761}/eureka/
+  instance:   
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    prefer-ip-address: true
+
+webapp:
+  url: ${WEBAPP_URL}
+  
