@@ -115,7 +115,7 @@ spring:
     mongodb:
       database: mp_page_request
       host: o2c-mongodb
-      port: 27018
+      port: ${MONGO_PORT:27018}
   rabbitmq:
     host: rabbitmq
     port: 5672
