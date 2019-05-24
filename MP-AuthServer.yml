@@ -74,4 +74,16 @@ spring:
       host: localhost
       port: 27018
     
+---
+spring:
+  profiles: docker
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${EUREKA_SERVER:eureka-server}:${EUREKA_PORT:8761}/eureka/
+  instance:
+    statusPageUrlPath: /actuator/info
+    healthCheckUrlPath: /actuator/health      
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    prefer-ip-address: true
