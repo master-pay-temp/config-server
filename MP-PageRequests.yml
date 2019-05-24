@@ -123,7 +123,7 @@ spring:
     password: ${RABBITMQ_DEFAULT_PASS}
     
     
- server:
+server:
   port: ${PORT:8080}
     
 eureka:
