@@ -38,10 +38,6 @@ amqp:
       created:
         breakdown: created_breakdown
     queue:
-      payment:
-        completed:
-          response: payment_completed_breakdown_response_queue
-          
       capture:
         completed:
           response: capture_completed_breakdown_response_queue
