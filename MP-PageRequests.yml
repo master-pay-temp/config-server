@@ -111,8 +111,6 @@ webapp:
 ---
 spring:
   profiles: docker
-  server:
-    port: ${PORT:8080}
   data:
     mongodb:
       database: mp_page_request
@@ -122,8 +120,12 @@ spring:
     host: ${RABBIT_SERVER:rabbitmq}
     port: 5672
     username: ${RABBITMQ_DEFAULT_USER}
-    password: ${RABBITMQ_DEFAULT_PASS}      
-
+    password: ${RABBITMQ_DEFAULT_PASS}
+    
+    
+ server:
+  port: ${PORT:8080}
+    
 eureka:
   client:
     serviceUrl:
