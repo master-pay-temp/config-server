@@ -119,8 +119,8 @@ spring:
   rabbitmq:
     host: ${RABBIT_SERVER:rabbitmq}
     port: 5672
-    username: ${RABBITMQ_DEFAULT_USER}
-    password: ${RABBITMQ_DEFAULT_PASS}
+    username: ${RABBITMQ_USER}
+    password: ${RABBITMQ_PASS}
     
 eureka:
   client:
