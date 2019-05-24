@@ -118,7 +118,7 @@ spring:
       port: ${MONGO_PORT:27018}
   rabbitmq:
     host: ${RABBIT_SERVER:rabbitmq}
-    port: 5672
+    port: ${RABBIT_PORT:5672}
     username: ${RABBITMQ_USER}
     password: ${RABBITMQ_PASS}
 
