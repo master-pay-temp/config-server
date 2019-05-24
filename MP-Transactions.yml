@@ -57,10 +57,6 @@ amqp:
       transaction:
         completed:
           request: transaction_completed_transaction_response_queue
-      payment:
-        completed:
-          response: payment_completed_transaction_response_queue
-          
       breakdown:
         created:
           response: breakdown_created_transaction_response_queue
