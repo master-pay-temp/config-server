@@ -78,6 +78,9 @@ spring:
 spring:
   profiles: docker
 
+server:
+  port: ${PORT}
+
 eureka:
   client:
     serviceUrl:
