@@ -3,17 +3,17 @@ server:
   
 spring:
   mail:
-    host: smtp.mailtrap.io
-    port: 2525
-    username: 52d4b6dbb55799
-    password: 9f028b30ab8594
+    host: ssl0.ovh.net
+    port: 587
+    username: postmaster@o2c.ovh
+    password: MasterPay1234
     properties:
       mail:
         smtp:
           ssl:
             enable: false
           starttls:
-            enable: true  
+            enable: false  
     
   multirabbitmq:
     rabbitmq:
