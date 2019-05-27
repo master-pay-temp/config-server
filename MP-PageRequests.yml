@@ -74,6 +74,12 @@ param:
   
 webapp:
   url: http://localhost:4200
+  
+dalenys:
+  identifier: O2C-TEST
+  accountKey: x7#4D8LCP}ddjh6/
+  version: 3.0
+  
 ---
 spring:
   profiles: integration
@@ -108,6 +114,10 @@ spring:
 webapp:
   url: http://webapp-qa.o2c.ovh
   
+dalenys:
+  identifier: O2C-TEST2
+  accountKey: Bg7:[6./m,<Oa#ss
+  version: 3.0  
 ---
 spring:
   profiles: docker
@@ -140,4 +150,8 @@ security:
 
 webapp:
   url: ${WEBAPP_URL}
-  
+ 
+dalenys:
+  identifier: ${DALENYS_IDENTIFIER}
+  accountKey: ${DALENYS_ACCOUNTKEY}
+  version: ${DALENYS_VERSION:3.0}  
