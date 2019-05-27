@@ -106,7 +106,7 @@ spring:
     password: master123      
       
 webapp:
-  url: http://qa.o2c.ovh
+  url: http://webapp-qa.o2c.ovh
   
 ---
 spring:
