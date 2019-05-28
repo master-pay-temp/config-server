@@ -112,7 +112,7 @@ spring:
     password: master123      
       
 webapp:
-  url: http://webapp-qa.o2c.ovh
+  url: https://webapp-qa.o2c.ovh
   
 dalenys:
   identifier: O2C-TEST2
