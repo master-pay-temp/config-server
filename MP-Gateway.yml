@@ -190,14 +190,3 @@ management:
       exposure:
         include: "*"
 
----
-spring:
-  profile: docker
-  server:
-    port: ${port:8880}
-  
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://${EUREKA_SERVER:eureka-server}:${EUREKA_PORT:8761}/eureka/  
-  
