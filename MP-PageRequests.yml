@@ -95,7 +95,7 @@ spring:
     password: master123      
       
 webapp:
-  url: http://webapp-integration.o2c.ovh
+  url: https://webapp-integration.o2c.ovh
   
 ---
 spring:
