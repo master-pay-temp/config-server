@@ -172,6 +172,13 @@ spring:
         - Path=/paymentReference/{transactionId}/marketPlace/{marketPlaceId}
         filters:
         - RewritePath=/paymentReference/(?<transactionId>.*)/marketPlace/(?<marketPlaceId>.*), /paymentReference/$\{transactionId}/marketPlace/$\{marketPlaceId}
+      - id: MP-Customers-PaymentMeans
+        uri: lb://MP-Customers
+        predicates:
+        - Path=/customers/{marketPlaceId}/{customerId}
+        filters:
+        - RewritePath=/customers/(?<marketPlaceId>.*)/(?<customerId>.*), /$\{marketPlaceId}/$\{customerId}
+
 
 eureka:
   client:
