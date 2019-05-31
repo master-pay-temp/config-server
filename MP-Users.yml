@@ -58,7 +58,14 @@ amqp:
     key:
       created:
         request: events
-    
+
+gravitee:
+  dac: bWFzdGVyX3BheV9jbGllbnQ6Wm1ZMll6UmlaRGsxTXpkbE56aGxZV00yTURZeVlXRTRZVEEwTmprNQ
+  url:
+    access_token: http://gravitee.o2c.ovh/am/masterpay/oauth/token
+    clients_service: http://gravitee.o2c.ovh/am/management/domains/masterpay/clients
+    users_service: http://gravitee.o2c.ovh/am/management/domains/masterpay/users
+  
 ---
 spring:
   profiles: integration
