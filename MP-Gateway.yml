@@ -44,6 +44,13 @@ spring:
         - Method=GET
         filters:
         - RewritePath=/transactions/(?<id>.*), /$\{id}
+      - id: MP-Transactions-UpdateTransaction-storePaymentMean
+        uri: lb://MP-Transactions
+        predicates:
+        - Path=/transactions/{id}
+        - Method=PUT
+        filters:
+        - RewritePath=/transactions/(?<id>.*), /$\{id}        
       - id: MP-AuthServer
         uri: lb://MP-AuthServer        
         predicates:
