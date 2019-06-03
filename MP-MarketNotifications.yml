@@ -20,8 +20,8 @@ spring:
       defaultConnection: true
       host: localhost
       port: 6672
-      username: guest
-      password: guest
+      username: master-pay
+      password: BvSeKJ9yw9759ePHtEqR
 
 email:
   from: export@o2c.ovh
