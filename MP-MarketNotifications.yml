@@ -6,7 +6,7 @@ spring:
     host: smtp.gmail.com
     port: 587
     username: o2pmasterpay@gmail.com
-    password: !MasterPay123!
+    password: "!MasterPay123!"
     properties:
       mail:
         smtp:
