@@ -18,6 +18,12 @@ spring:
                 - DELETE
                 - OPTIONS           
       routes:
+      - id: MP-PspService
+        uri: lb://MP-PspService
+        predicates:
+        - Path=/pspRecurringPayment
+        filters:
+        - RewritePath=/pspRecurringPayment, /pspRecurringPayment
       - id: MP-PageRequests
         uri: lb://MP-PageRequests
         predicates:
