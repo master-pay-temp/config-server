@@ -1,4 +1,5 @@
 server:
+  url: http://localhost:${server.port}
   port: 51073
   
 spring:
@@ -110,6 +111,8 @@ spring:
     username: master-pay
     password: master123
 
+server:
+  url: http://o2c.ovh:${server.port}
 
 ---
 spring:
@@ -124,3 +127,6 @@ spring:
     port: 5672
     username: master-pay
     password: master123
+
+server:
+  url: http://qa.o2c.ovh:${server.port}
