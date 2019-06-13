@@ -191,7 +191,18 @@ spring:
         - Path=/customers/{marketPlaceId}/{customerId}
         filters:
         - RewritePath=/customers/(?<marketPlaceId>.*)/(?<customerId>.*), /$\{marketPlaceId}/$\{customerId}
-
+      - id: MP-Beneficiaries
+        uri: lb://MP-Beneficiaries
+        predicates:
+        - Path=/beneficiaries
+        filters:
+        - RewritePath=/beneficiaries, /
+      - id: MP-Beneficiaries-withId
+        uri: lb://MP-Beneficiaries
+        predicates:
+        - Path=/beneficiaries/{id}
+        filters:
+        - RewritePath=/beneficiaries/(?<id>.*), /$\{id}
 
 eureka:
   client:
