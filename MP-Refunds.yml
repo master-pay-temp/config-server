@@ -88,9 +88,9 @@ export:
     
     
 dalenys:
-  identifier: ${DALENYS_IDENTIFIER:x7#4D8LCP}ddjh6/}
-  accountKey: ${DALENYS_ACCOUNTKEY:O2C-TEST}
-  version: ${DALENYS_VERSION:3.0}     
+  identifier: x7#4D8LCP}ddjh6/
+  accountKey: O2C-TEST
+  version: 3.0
   
 ---
 spring:
