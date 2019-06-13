@@ -88,8 +88,8 @@ export:
     
     
 dalenys:
-  identifier: x7#4D8LCP}ddjh6/
-  accountKey: O2C-TEST
+  identifier: O2C-TEST
+  accountKey: x7#4D8LCP}ddjh6/
   version: 3.0
   
 ---
