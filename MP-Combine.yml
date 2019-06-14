@@ -20,6 +20,10 @@ eureka:
     statusPageUrlPath: /actuator/info
     healthCheckUrlPath: /actuator/health      
     instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    
+logging: 
+  level: 
+    org.springframework.data.mongodb.core.ReactiveMongoTemplate: DEBUG
   
 breakdowns:
   service: MP-BREAKDOWNS
