@@ -133,7 +133,7 @@ spring:
     password: ${RABBITMQ_PASS}
 
 server: 
-  port: ${PORT}
+  port: ${PORT:51060}
 
 eureka:
   client:
