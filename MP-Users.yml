@@ -65,6 +65,10 @@ gravitee:
     access_token: http://gravitee.o2c.ovh/am/masterpay/oauth/token
     clients_service: http://gravitee.o2c.ovh/am/management/domains/masterpay/clients
     users_service: http://gravitee.o2c.ovh/am/management/domains/masterpay/users
+
+kibana:
+  baseUrl: http://tools.o2c.ovh:9200/_security
+  basicAuth: ZWxhc3RpYzpjaGFuZ2VtZQ==
   
 ---
 spring:
