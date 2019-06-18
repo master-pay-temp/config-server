@@ -80,6 +80,9 @@ auth:
 combine:
   service: MP-COMBINE
 
+moneyprovider:
+  service: MP-MONEYPROVIDER
+
 ---
 spring:
   profiles: integration
