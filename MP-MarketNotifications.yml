@@ -19,7 +19,7 @@ spring:
       host: localhost
       port: 6672
       username: master-pay
-      password: BvSeKJ9yw9759ePHtEqR
+      password: ZDEgYjggMjcgYTcgYWIg
 
 email:
   from: export@o2c.ovh
